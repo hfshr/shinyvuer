@@ -1,0 +1,11 @@
+{
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "vue"
+    ],
+    "r.session.viewers.viewColumn": {
+      "browser": "Disable"
+  }
+  }
+  
