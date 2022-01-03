@@ -5,7 +5,7 @@ Authors@R:
     person(given = "Harry",
            family = "Fisher",
            role = c("aut", "cre"),
-           email = "harryfisher21@gmIL.COM)
+           email = "harryfisher21@gmail.com")
 Description: Playground for shiny and vue.
 License: MIT + file LICENSE
 Imports: 

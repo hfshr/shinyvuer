@@ -3,6 +3,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
+A quick demo of using Shiny and Vue together.
+
 ## Installation
 
 You can install the development version of shinyvuer like so:
@@ -15,6 +17,5 @@ pak::pak("hfshr/shinyvuer")
 Start the app with
 
 ```r
-library(shinyvuer)
 shinyvuer::run_app()
 ```
