@@ -16,6 +16,20 @@ app_server <- function(input, output, session) {
     mtcars_tidy
   )
 
+  observe({
+    mtcars_sample <- mtcars_tidy %>%
+      dplyr::slice_sample(n = 10)
+    rVuexSetState(
+      session,
+      "mtcars",
+      mtcars_sample
+    )
+  }) %>%
+    bindEvent(
+      input$updateTable,
+      ignoreNULL = TRUE
+    )
+
   output$hist_plot <- renderPlot({
     if (is.null(input$hist)) val <- 10 else val <- input$hist
     x <- faithful[, 2]
@@ -24,7 +38,6 @@ app_server <- function(input, output, session) {
     # draw the histogram with the specified number of bins
     hist(x, breaks = bins, col = "darkgray", border = "white")
   })
-
 
 
   observe({
@@ -51,22 +64,6 @@ app_server <- function(input, output, session) {
       )
     }
   })
-
-
-
-  observe({
-    mtcars_sample <- mtcars_tidy %>%
-      dplyr::slice_sample(n = 10)
-    rVuexSetState(
-      session,
-      "mtcars",
-      mtcars_sample
-    )
-  }) %>%
-    bindEvent(
-      input$updateTable,
-      ignoreNULL = TRUE
-    )
 
   session$onSessionEnded(function() {
     stopApp()
