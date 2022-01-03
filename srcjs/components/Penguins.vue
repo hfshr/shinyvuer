@@ -3,10 +3,14 @@
     <div class="text-center">
       <v-dialog v-model="dialog" width="500">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn color="red lighten-2" dark v-bind="attrs" v-on="on">
+          <v-btn color="red lighten-2" dark v-bind="attrs" v-on="on" large>
             p-p-pick a pengin
+            <br />
+            <v-icon right dark> mdi-penguin </v-icon>
           </v-btn>
         </template>
+
+        <v-spacer />
 
         <v-card>
           <v-card-title class="text-h3"> Penguin selectooor </v-card-title>
@@ -36,7 +40,7 @@
     <v-container fluid>
       <v-row>
         <v-col cols="4" offset="4">
-          <v-card v-if="isShown">
+          <v-card v-if="isShown" class="card">
             <v-img
               :src="penguinImages[selectedPenguinText]"
               height="200px"
@@ -122,3 +126,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.card {
+  margin-top: 20px;
+}
+</style>

@@ -37,6 +37,24 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-4[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./srcjs/components/Penguins.vue?vue&type=style&index=0&id=05773380&scoped=true&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-4[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./srcjs/components/Penguins.vue?vue&type=style&index=0&id=05773380&scoped=true&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+// Imports
+var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.card[data-v-05773380] {\n  margin-top: 20px;\n}\n", "",{"version":3,"sources":["webpack://./srcjs/components/Penguins.vue"],"names":[],"mappings":";AAkIA;EACA,gBAAA;AACA","sourcesContent":["<template>\n  <div>\n    <div class=\"text-center\">\n      <v-dialog v-model=\"dialog\" width=\"500\">\n        <template v-slot:activator=\"{ on, attrs }\">\n          <v-btn color=\"red lighten-2\" dark v-bind=\"attrs\" v-on=\"on\" large>\n            p-p-pick a pengin\n            <br />\n            <v-icon right dark> mdi-penguin </v-icon>\n          </v-btn>\n        </template>\n\n        <v-spacer />\n\n        <v-card>\n          <v-card-title class=\"text-h3\"> Penguin selectooor </v-card-title>\n\n          <v-card-text>\n            Pick a penguin from the list to return some information about the\n            penguin.\n            <v-select\n              v-model=\"selectedPenguin\"\n              :items=\"items\"\n              item-text=\"species\"\n              label=\"Penguins\"\n              return-object\n            ></v-select>\n          </v-card-text>\n\n          <v-divider></v-divider>\n\n          <v-card-actions>\n            <v-spacer></v-spacer>\n            <v-btn color=\"primary\" text @click=\"getPenguin\"> Go </v-btn>\n          </v-card-actions>\n        </v-card>\n      </v-dialog>\n    </div>\n\n    <v-container fluid>\n      <v-row>\n        <v-col cols=\"4\" offset=\"4\">\n          <v-card v-if=\"isShown\" class=\"card\">\n            <v-img\n              :src=\"penguinImages[selectedPenguinText]\"\n              height=\"200px\"\n            ></v-img>\n            <v-card-title class=\"subheading font-weight-bold\">\n              {{ showPenguin[0].species }}\n            </v-card-title>\n            <v-card-subtitle>\n              Mean values for selected penguin\n            </v-card-subtitle>\n            <v-divider></v-divider>\n\n            <v-list dense>\n              <v-list-item>\n                <v-list-item-content>Bill length (mm):</v-list-item-content>\n                <v-list-item-content class=\"align-end\">\n                  {{ showPenguin[0].bill_length_mm }}\n                </v-list-item-content>\n              </v-list-item>\n\n              <v-list-item>\n                <v-list-item-content>Bill depth (mm):</v-list-item-content>\n                <v-list-item-content class=\"align-end\">\n                  {{ showPenguin[0].bill_depth_mm }}\n                </v-list-item-content>\n              </v-list-item>\n\n              <v-list-item>\n                <v-list-item-content>Flipper length (mm):</v-list-item-content>\n                <v-list-item-content class=\"align-end\">\n                  {{ showPenguin[0].flipper_length_mm }}\n                </v-list-item-content>\n              </v-list-item>\n\n              <v-list-item>\n                <v-list-item-content>Bodymass (g):</v-list-item-content>\n                <v-list-item-content class=\"align-end\">\n                  {{ showPenguin[0].body_mass_g }}\n                </v-list-item-content>\n              </v-list-item>\n            </v-list>\n          </v-card>\n        </v-col>\n      </v-row>\n    </v-container>\n  </div>\n</template>\n\n<script>\nimport adelie from \"../assets/penguins/adellie.jpg\";\nimport chinstrap from \"../assets/penguins/chinstrap.jpg\";\nimport gentoo from \"../assets/penguins/gentoo.jpg\";\n\nexport default {\n  data: () => ({\n    items: [\n      { species: \"Adelie\", value: \"adelie\" },\n      { species: \"Gentoo\", value: \"gentoo\" },\n      { species: \"Chinstrap\", value: \"chinstrap\" },\n    ],\n    selectedPenguinText: null,\n    selectedPenguin: null,\n    dialog: false,\n    isShown: false,\n    penguinImages: {\n      Adelie: adelie,\n      Chinstrap: chinstrap,\n      Gentoo: gentoo,\n    },\n  }),\n  methods: {\n    getPenguin() {\n      this.dialog = false; // close dialog\n      this.isShown = true; // show card now penguin is selected\n      this.selectedPenguinText = this.selectedPenguin.species;\n      Shiny.setInputValue(\"penguin\", this.selectedPenguin.species);\n    },\n  },\n  computed: {\n    showPenguin() {\n      return this.$store.state.penguin;\n    },\n  },\n};\n</script>\n\n<style scoped>\n.card {\n  margin-top: 20px;\n}\n</style>\n"],"sourceRoot":""}]);
+// Exports
+module.exports = ___CSS_LOADER_EXPORT___;
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-4[0].rules[0].use[1]!./node_modules/vuetify/dist/vuetify.min.css":
 /*!*****************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-4[0].rules[0].use[1]!./node_modules/vuetify/dist/vuetify.min.css ***!
@@ -50537,23 +50555,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Penguins_vue_vue_type_template_id_05773380___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Penguins.vue?vue&type=template&id=05773380& */ "./srcjs/components/Penguins.vue?vue&type=template&id=05773380&");
+/* harmony import */ var _Penguins_vue_vue_type_template_id_05773380_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Penguins.vue?vue&type=template&id=05773380&scoped=true& */ "./srcjs/components/Penguins.vue?vue&type=template&id=05773380&scoped=true&");
 /* harmony import */ var _Penguins_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Penguins.vue?vue&type=script&lang=js& */ "./srcjs/components/Penguins.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Penguins_vue_vue_type_style_index_0_id_05773380_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Penguins.vue?vue&type=style&index=0&id=05773380&scoped=true&lang=css& */ "./srcjs/components/Penguins.vue?vue&type=style&index=0&id=05773380&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
+;
 
 
 /* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _Penguins_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Penguins_vue_vue_type_template_id_05773380___WEBPACK_IMPORTED_MODULE_0__.render,
-  _Penguins_vue_vue_type_template_id_05773380___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _Penguins_vue_vue_type_template_id_05773380_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Penguins_vue_vue_type_template_id_05773380_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  null,
+  "05773380",
   null
   
 )
@@ -50830,19 +50850,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./srcjs/components/Penguins.vue?vue&type=template&id=05773380&":
-/*!**********************************************************************!*\
-  !*** ./srcjs/components/Penguins.vue?vue&type=template&id=05773380& ***!
-  \**********************************************************************/
+/***/ "./srcjs/components/Penguins.vue?vue&type=template&id=05773380&scoped=true&":
+/*!**********************************************************************************!*\
+  !*** ./srcjs/components/Penguins.vue?vue&type=template&id=05773380&scoped=true& ***!
+  \**********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Penguins_vue_vue_type_template_id_05773380___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Penguins_vue_vue_type_template_id_05773380___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Penguins_vue_vue_type_template_id_05773380_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Penguins_vue_vue_type_template_id_05773380_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Penguins_vue_vue_type_template_id_05773380___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Penguins.vue?vue&type=template&id=05773380& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./srcjs/components/Penguins.vue?vue&type=template&id=05773380&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Penguins_vue_vue_type_template_id_05773380_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Penguins.vue?vue&type=template&id=05773380&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./srcjs/components/Penguins.vue?vue&type=template&id=05773380&scoped=true&");
 
 
 /***/ }),
@@ -50910,6 +50930,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_4_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Mtcars_vue_vue_type_style_index_0_id_19888502_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_4_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Mtcars_vue_vue_type_style_index_0_id_19888502_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
 /* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_4_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Mtcars_vue_vue_type_style_index_0_id_19888502_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_4_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Mtcars_vue_vue_type_style_index_0_id_19888502_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
+
+
+/***/ }),
+
+/***/ "./srcjs/components/Penguins.vue?vue&type=style&index=0&id=05773380&scoped=true&lang=css&":
+/*!************************************************************************************************!*\
+  !*** ./srcjs/components/Penguins.vue?vue&type=style&index=0&id=05773380&scoped=true&lang=css& ***!
+  \************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_4_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Penguins_vue_vue_type_style_index_0_id_05773380_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-style-loader/index.js!../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-4[0].rules[0].use[1]!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Penguins.vue?vue&type=style&index=0&id=05773380&scoped=true&lang=css& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-4[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./srcjs/components/Penguins.vue?vue&type=style&index=0&id=05773380&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_4_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Penguins_vue_vue_type_style_index_0_id_05773380_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_4_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Penguins_vue_vue_type_style_index_0_id_05773380_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_4_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Penguins_vue_vue_type_style_index_0_id_05773380_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_4_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Penguins_vue_vue_type_style_index_0_id_05773380_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
 /* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
 
 
@@ -51331,10 +51368,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./srcjs/components/Penguins.vue?vue&type=template&id=05773380&":
-/*!*************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./srcjs/components/Penguins.vue?vue&type=template&id=05773380& ***!
-  \*************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./srcjs/components/Penguins.vue?vue&type=template&id=05773380&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./srcjs/components/Penguins.vue?vue&type=template&id=05773380&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -51369,14 +51406,28 @@ var render = function () {
                         "v-btn",
                         _vm._g(
                           _vm._b(
-                            { attrs: { color: "red lighten-2", dark: "" } },
+                            {
+                              attrs: {
+                                color: "red lighten-2",
+                                dark: "",
+                                large: "",
+                              },
+                            },
                             "v-btn",
                             attrs,
                             false
                           ),
                           on
                         ),
-                        [_vm._v("\n          p-p-pick a pengin\n        ")]
+                        [
+                          _vm._v("\n          p-p-pick a pengin\n          "),
+                          _c("br"),
+                          _vm._v(" "),
+                          _c("v-icon", { attrs: { right: "", dark: "" } }, [
+                            _vm._v(" mdi-penguin "),
+                          ]),
+                        ],
+                        1
                       ),
                     ]
                   },
@@ -51391,6 +51442,8 @@ var render = function () {
               },
             },
             [
+              _vm._v(" "),
+              _c("v-spacer"),
               _vm._v(" "),
               _c(
                 "v-card",
@@ -51466,6 +51519,7 @@ var render = function () {
                   _vm.isShown
                     ? _c(
                         "v-card",
+                        { staticClass: "card" },
                         [
                           _c("v-img", {
                             attrs: {
@@ -51892,6 +51946,27 @@ if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(/*! !../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js")["default"])
 var update = add("3aaf34dd", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-4[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./srcjs/components/Penguins.vue?vue&type=style&index=0&id=05773380&scoped=true&lang=css&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-4[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./srcjs/components/Penguins.vue?vue&type=style&index=0&id=05773380&scoped=true&lang=css& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-4[0].rules[0].use[1]!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Penguins.vue?vue&type=style&index=0&id=05773380&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-4[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./srcjs/components/Penguins.vue?vue&type=style&index=0&id=05773380&scoped=true&lang=css&");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = (__webpack_require__(/*! !../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js")["default"])
+var update = add("57a2e0d3", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
