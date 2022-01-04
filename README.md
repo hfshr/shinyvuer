@@ -10,6 +10,10 @@ A quick demo of using Shiny and Vue together. Inspired by this [shiny dev series
 
 ## Try it out
 
+View the app on shinyapps.io here:
+
+[https://harryfish.shinyapps.io/shinyvuer/](https://harryfish.shinyapps.io/shinyvuer/)
+
 You can install app with:
 
 ```r

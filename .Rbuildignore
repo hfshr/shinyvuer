@@ -13,3 +13,7 @@ $run_dev.*
 ^webpack\.common\.js$
 ^\.babelrc$
 ^LICENSE\.md$
+^app\.R$
+^rsconnect$
+^.vscode$
+^jsonconfig\.json$
